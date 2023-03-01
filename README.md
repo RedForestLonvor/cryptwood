@@ -8,7 +8,7 @@ Encryption tools for protecting private data
 
 # install
 
-installed using pip：
+install through pip：
 
 ```bash
 python3 -m pip install cryptwood
