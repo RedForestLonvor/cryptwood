@@ -1,4 +1,4 @@
-[![English badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)[![English badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](https://github.com/RedForestLonvor/cryptwood/blob/main/README-EN.md)
+[![English badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](https://github.com/RedForestLonvor/cryptwood/blob/main/README-EN.md)
 [![简体中文 badge](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-Simplified%20Chinese-blue)](https://github.com/RedForestLonvor/cryptwood/blob/main/README.md)
 
 # [cryptwood](https://pypi.org/project/cryptwood/)
