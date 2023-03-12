@@ -27,7 +27,10 @@ python3 -m pip install cryptwood
 在解密时需要保证类存在。  
 
 这个这个工具使用了AES256算法对数据进行对称加密。
-加密过程中随机产生秘钥和初始向量。 这些文件将被存储在`~/.cryptUserDataKey`中。
+加密过程中随机产生秘钥和初始向量。 这些文件将被存储在`~/.cryptUserDataKey`中。  
+
+此工具会在项目目录下创建config.ini（如果此文件存在则会直接使用）文件。并再此文件中保存`key`和`iv`的存储位置。
+
 
 
 # 使用场景
@@ -47,7 +50,11 @@ python3 -m pip install cryptwood
   所在位置的上级目录+"key"或"iv"。
 + `cryptwood.dataCrypter.decrypt()`:
   解密`.cryptUserData`并反序列化，返回一个对象。
-
++ `cryptwood.setPath(rowCustomPath)`:
+  用户可以设置`key`和`iv`的存储位置。注意的是:`rowCustomPath`必须是准确的路径，
+  也就是说'/'一类的特殊字符必须被转义，也就是写成'//'。或者使用r"..."将字符串修饰为row的。
++ `cryptwood.getCustomPath()`:
+  允许用户查询`key`和`iv`的存储位置。
 
 # TODO
 

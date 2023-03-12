@@ -28,7 +28,9 @@ Objects to be serialized and encrypted can be of any type, including custom clas
 It is necessary to ensure that the class exists when decrypting.  
 
 This tool uses the AES256 algorithm to encrypt data symmetrically.
-During the encryption process, the secret key and initial vector are randomly generated. These files will be stored in`~/.cryptUserDataKey`.
+During the encryption process, the secret key and initial vector are randomly generated. These files will be stored in`~/.cryptUserDataKey`.  
+
+This tool will create a config.ini (if it exists, it will be used directly) file in the project directory. And save the storage location of `key` and `iv` in this file.
 
 
 # scenes
@@ -47,7 +49,11 @@ Make this project only run on your computer, or only after you authorize it.
    's parent directory location + "key" or "iv".
 + `cryptwood.dataCrypter.decrypt()`:  
   Decrypts `.cryptUserData` and deserializes, returning an object.
-
++ `cryptwood.setPath(rowCustomPath)`:
+   Users can set the storage location of `key` and `iv`. Note: `rowCustomPath` must be an exact path,
+   That is to say, special characters like '/' must be escaped, that is, written as '//'. Or use r"..." to modify the string as a row.
++ `cryptwood. getCustomPath()`:
+   Allows users to query where `key` and `iv` are stored.
 
 # TODO
 

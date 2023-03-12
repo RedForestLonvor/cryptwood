@@ -2,6 +2,7 @@ LICENSE
 README.md
 setup.py
 cryptwood/AES256cryptor.py
+cryptwood/CWconfig.py
 cryptwood/__init__.py
 cryptwood/cryptwood.py
 cryptwood.egg-info/PKG-INFO

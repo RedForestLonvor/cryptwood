@@ -2,20 +2,18 @@ import pickle
 import inspect
 from cryptwood import AES256cryptor
 import os
-import configparser
+from cryptwood.CWconfig import CWconfig
 
-# config = configparser.ConfigParser()
-# config.read('config.ini')
-# DEFAULT_KEY_PATH = config.get('PathConfig','KEY_PATH')
-
-DEFAULT_KEY_PATH = 'HOMEPATH'
+def getCustomPath():
+    CWconfig.getCustomPath()
 
 class fileManager():
 
     @staticmethod
     def getKeyPath(projectPath):
+        DEFAULT_KEY_PATH = CWconfig.getCustomPath()
+        DEFAULT_KEY_PATH = 'HOMEPATH' if DEFAULT_KEY_PATH == 'HOME' else DEFAULT_KEY_PATH
         homePath = os.path.expanduser('~')if DEFAULT_KEY_PATH == "HOMEPATH" else DEFAULT_KEY_PATH
-
         keyPath = os.path.join(homePath,".cryptUserDataKey",(projectPath.replace(os.sep, '_')).replace(":",''))
         return keyPath
 
@@ -36,6 +34,14 @@ class fileManager():
             file.write(iv)
         with open(fileManager.getCiphertextPath(path), "wb") as file:
             file.write(cryptAns)
+
+def setPath(rowCustomPath):
+    """
+    ATTENTION:
+    Parameter 'rowCustomPath' must be accurate path so any '/' should be doubled
+    or use r"..." to change string to row data
+    """
+    CWconfig.setPath(rowCustomPath)
 
 class dataCrypter:
 
