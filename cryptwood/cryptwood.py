@@ -14,7 +14,7 @@ class fileManager():
         DEFAULT_KEY_PATH = CWconfig.getCustomPath()
         DEFAULT_KEY_PATH = 'HOMEPATH' if DEFAULT_KEY_PATH == 'HOME' else DEFAULT_KEY_PATH
         homePath = os.path.expanduser('~')if DEFAULT_KEY_PATH == "HOMEPATH" else DEFAULT_KEY_PATH
-        keyPath = os.path.join(homePath,".cryptUserDataKey",(projectPath.replace(os.sep, '_')).replace(":",''))
+        keyPath = os.path.join(homePath,".cryptUserDataKey",(projectPath.replace(os.sep, '_')).replace(":",'').replace('/', '_'))
         return keyPath
 
     @staticmethod
