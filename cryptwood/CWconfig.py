@@ -19,8 +19,7 @@ class CWconfig:
 
     @staticmethod
     def getCustomPath():
-        if not CWconfig.exist():
-            return None
+        CWconfig.exist()
         config = configparser.ConfigParser()
         config.read('config.ini')
         return config.get('PATH', 'keyPath')
