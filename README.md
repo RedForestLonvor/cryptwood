@@ -44,7 +44,7 @@ python3 -m pip install cryptwood
 
 # 函数
 
-+ `cryptwood.dataCrypter.decrypt(object)`:  
++ `cryptwood.dataCrypter.encrypt(object)`:  
   加密object对象并在代码目录下生成加密过的序列化文件`.cryptUserData`，没有返回值。  
   生成的`key`和`iv`文件存储在`~/.cryptUserData`文件夹下。文件名为调用此工具的代码
   所在位置的上级目录+"key"或"iv"。

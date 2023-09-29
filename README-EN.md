@@ -43,7 +43,7 @@ Make this project only run on your computer, or only after you authorize it.
 
 # function
 
-+ `cryptwood.dataCrypter.decrypt(object)`:  
++ `cryptwood.dataCrypter.encrypt(object)`:  
   Encrypt the object object and generate an encrypted serialized file in the code directory`.cryptUserData`, no return.  
   Generated`key`and`iv`files are stored in`~/.cryptUserData`folder. The folder name is the code that calls this function
    's parent directory location + "key" or "iv".
