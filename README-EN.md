@@ -18,7 +18,7 @@ python3 -m pip install cryptwood
 # overview
 
 Through this tool, a python object can be quickly serialized and encrypted, and then stored in
-with the code directory in the project. At this point, objects that exist in the code can be deleted. In wishing to use this object
+with the directory in the project. At this point, objects that exist in the code can be deleted. In wishing to use this object
 When you only need to decrypt and deserialize.  
 
 In this way, sensitive information (or any information that you don't want others to see) can be avoided from appearing directly in the
